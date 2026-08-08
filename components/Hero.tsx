@@ -53,7 +53,7 @@ export default function Hero() {
   useEffect(() => {
     const id = setInterval(
       () => setCurrent((c) => (c + 1) % slides.length),
-      5500
+      5000
     );
     return () => clearInterval(id);
   }, []);
@@ -72,7 +72,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: 1.06 }}
             exit={{ opacity: 0, scale: 1.02 }}
-            transition={{ duration: 4, ease: "easeOut" }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <Image
